@@ -20,7 +20,7 @@ function pushFront(arr, val) {
 function popFront(arr) {
   const valBeg = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = arr[i + 1]
+    arr[i] = arr[i + 1];
   }
   arr.length -= 1;
   return valBeg;
