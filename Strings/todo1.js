@@ -67,7 +67,6 @@ function shortString(arr, val) {
     if (arr[i].length < val) {
       counter++;
     } else {
-      console.log(arr[i] + idx);
       arr[idx++] = arr[i]
     }
 
