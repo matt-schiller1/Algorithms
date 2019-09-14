@@ -40,22 +40,6 @@ function removeEven(arr) {
 // Remember that 4 is IV, 349 is CCCIL and 444 is CDXLIV.
 
 function intToRoman(num) {
-  num = parseInt(num);
-  let numeral = {
-    M: 1000,
-    CM: 900,
-    D: 500,
-    CD: 400,
-    C: 100,
-    XC: 90,
-    L: 50,
-    XL: 40,
-    X: 10,
-    IX: 9,
-    V: 5,
-    IV: 4,
-    I: 1
-  };
   let str = '';
 
   if (num >= 1000) {
@@ -138,5 +122,16 @@ function intToRoman(num) {
   return str;
 }
 
-let butt = 1998
-console.log(intToRoman(butt));
+function romanize(num) {
+  var lookup = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 }, roman = '', i;
+  for (i in lookup) {
+    while (num >= lookup[i]) {
+      console.log(lookup[i]);
+      roman += i;
+      num -= lookup[i];
+    }
+  }
+  return roman;
+}
+
+console.log(romanize(1961));
