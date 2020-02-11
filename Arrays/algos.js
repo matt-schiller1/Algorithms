@@ -73,22 +73,22 @@
 
 
 
-// function removeDupes(arr) {
-//   var names = {};
-//   var newArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (names[arr[i]] === undefined) {
-//       names[arr[i]] = arr[i];
-//     }
-//   }
+function removeDupes(arr) {
+  var names = {};
+  var newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (names[arr[i]] === undefined) {
+      names[arr[i]] = arr[i];
+    }
+  }
 
-//   for (k in names) {
-//     newArr.push(k);
-//   }
-//   return newArr;
-// }
+  for (k in names) {
+    newArr.push(k);
+  }
+  return newArr;
+}
 
-// var sortedArray = ["Alexis", "Matt", "Matt", "Matt", "Shannon", "Shannon"]
+
 
 // function removeDupes(arr) {
 //   let counter = arr.length - 1;
@@ -119,7 +119,7 @@
 //   return (arr);
 // }
 
-
+// var sortedArray = ["Alexis", "Matt", "Matt", "Matt", "Shannon", "Shannon"]
 
 // console.log(removeDupes(sortedArray))
 
@@ -241,22 +241,50 @@
 // Return a new array containing the first array’s elements, followed by the second array’s elements. 
 // Do not alter the original arrays. Ex.: arrConcat( ['a','b'], [1,2] ) should return new array ['a','b',1,2] . 
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-let arr2 = ["alexis", "Shannon", "matt"]
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// let arr2 = ["alexis", "Shannon", "matt"]
 
 
-function concatinate(arr, arr2) {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i]);
+// function concatinate(arr, arr2) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(arr[i]);
+//   }
+//   for (let i = 0; i < arr2.length; i++) {
+//     newArr.push(arr2[i]);
+//   }
+//   console.log(arr);
+//   console.log(arr2);
+//   return newArr;
+
+// }
+
+// console.log(concatinate(arr, arr2));
+
+
+// Array: Second-to-Last
+
+// Return the second-to-last element of an array. Given [42,true,4,"Kate",7] , return "Kate" . If array is too short, return null . 
+
+function secondToLast(arr) {
+  if (arr.length < 2) {
+    return null;
   }
-  for (let i = 0; i < arr2.length; i++) {
-    newArr.push(arr2[i]);
-  }
-  console.log(arr);
-  console.log(arr2);
-  return newArr;
-
+  return arr[arr.length - 2];
 }
 
-console.log(concatinate(arr, arr2));
+
+// Array: Nth-to-Last
+
+// Return the element that is N-from-array’s-end. Given ([5,2,3,6,4,9,7],3) , 
+// return 4 . If the array is too short, return null . 
+
+function nthToLast(arr, val) {
+  if (arr.length < val) {
+    return null;
+  }
+  return arr[arr.length - val]
+}
+
+let arr = [5, 2]
+console.log(nthToLast(arr, 3))

@@ -100,4 +100,4 @@ console.log(isPalindrome2("r.a,CEc!ar"))
 
 // Second: re-solve the above problem, but ignore spaces, tabs, returns, capitalization and punctuation. Given "Hot puree eruption!", return "tpureeerupt".
 
-//I have no idea
+// I have no idea

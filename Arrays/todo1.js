@@ -88,15 +88,39 @@ function swapPairs(arr) {
 // Second: Solve this without using any nested loops.
 
 function removeDupes(arr) {
-  let idx = 1;
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] != arr[i + 1]) {
-      arr[idx++] = arr[i + 1];
+  if (arr.length <= 1) {
+    return arr;
+  }
+  let obj = {};
+  let idx = 0;
+  counter = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]] === undefined) {
+      obj[arr[i]] = 1;
+    } else {
+      obj[arr[i]] += 1;
     }
   }
-  arr.length -= idx;
+  console.log(obj);
+  for (let i = 0; i < arr.length; i++) {
+    if (obj[arr[i]] > 1 && arr[i] != arr[i + 1]) {
+      idx++;
+      console.log(idx);
+      arr[idx] = arr[i + 1];
+      counter++;
+    }
+  }
+  if (arr[arr.length - 1] === [arr[arr.length - 2]]) {
+    arr[idx] = arr[arr.length - 1];
+    counter++;
+  }
+
+  arr.length -= counter;
   return arr;
 }
 
-let arr = ["Matt", "Matt", "Matt", "Shannon", "Shannon", "Alexis", "Alexis", "Raymund"];
+
+// let arr = ["Alexis", "Shannon", "Shannon"];
+let arr = ["Alexis", "Devon", "Matt", "Raymund", "Raymund", "Shannon", "Shannon"];
+// let arr = ["Alexis", "Alexis", "Devon", "Devon", "Matt", "Matt", "Raymund", "Shannon", "Shannon"];
 console.log(removeDupes(arr));
