@@ -6,7 +6,6 @@ the array.reverse method.
 Examples
 
 reverseString('bootcamp'); // => 'pmactoob'
-reverseString('app academy'); // => 'ymedaca ppa'
 reverseString(''); // => ''
 ***********************************************************************/
 
@@ -18,4 +17,4 @@ function reverseString(string) {
   return reverseString(string.substr(1)) + string.charAt(0);
 }
 
-console.log(reverseString("butthead"));
+console.log(reverseString("see how this works"));
