@@ -150,17 +150,18 @@ class LinkedList {
 }
 
 let list = new LinkedList();
-
-console.log(list.isEmpty());
-list.add("stay");
-list.add("strong");
-list.add("forever")
-console.log(list.size);
-list.insertAt("is fun", 2);
-list.displayList();
-list.get(2);
-list.indexOf("isnt it");
-list.removeAt(2);
-list.removeHead();
-list.displayList();
-console.log(list.size);
+let node = new Node("ghahah");
+console.log(node);
+// console.log(list.isEmpty());
+// list.add("stay");
+// list.add("strong");
+// list.add("forever")
+// console.log(list.size);
+// list.insertAt("is fun", 2);
+// list.displayList();
+// list.get(2);
+// list.indexOf("isnt it");
+// list.removeAt(2);
+// list.removeHead();
+// list.displayList();
+// console.log(list.size);
